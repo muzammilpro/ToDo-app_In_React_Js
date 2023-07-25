@@ -21,7 +21,7 @@ function App() {
   const [editIndex, setEditIndex] = useState(-1);
 
   const addTodo = () => {
-    if (newTodo.trim() === '') return;
+    if (newTodo.trim() == '') return;
     if (editIndex !== -1) {
       const newTodos = [...todos];
       newTodos[editIndex] = newTodo;
@@ -36,7 +36,7 @@ function App() {
 
   const removeTodo = (index) => {
     const newTodos = [...todos];
-    newTodos.splice(index, 1);
+    newTodos.splice(index, 1);o
     setTodos(newTodos);
   };
 
