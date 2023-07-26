@@ -35,13 +35,14 @@ export default function Students() {
     <div>
       <table>
         <tr>
+          <th>No.</th>
           <th>Name</th>
           <th>Batch</th>
           <th>Roll no.</th>
           <th>Class</th>
         </tr>
-        {students.map((item) => (
-          <StudentsList  student={item} /> // Added a unique key prop for each student
+        {students.map((item , index) => (
+          <StudentsList index={index} student={item} /> // Added a unique key prop for each student
         ))}
       </table>
     </div>
