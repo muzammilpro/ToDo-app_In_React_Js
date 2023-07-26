@@ -8,9 +8,11 @@ export default function Students() {
   const [batch, setBatch] = useState("");
   const [roll, setRoll] = useState("");
   const [stuClass, setStuClass] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const ctaHandler = () => {
-    const newStudent = {
+    if (name != "" && batch != "" && roll!="" && stuClass!="") 
+   { const newStudent = {
       name,
       batch,
       roll,
@@ -22,6 +24,12 @@ export default function Students() {
       setStuClass("")
       setRoll("")
       setBatch("")
+      setErrorMessage("")
+    }
+      
+      else{
+        setErrorMessage("Found Blank Forms")
+      }
   };
 
   return (
@@ -33,6 +41,9 @@ export default function Students() {
       <input type="text" value={stuClass} placeholder="Class" onChange={(e) => setStuClass(e.target.value)} />
       <hr />
       <button onClick={ctaHandler}>Submit</button>
+      <p style={{backgroundColor: "red", color: "White"}}>
+        {errorMessage}
+      </p>
       <hr />
 
       <h3>Lists of Students</h3>
