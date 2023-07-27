@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function studentsList({student , index , deleteHandler}) {
+export default function StudentsList({student , index , deleteHandler , updateHandler}) {
    
     return (
         <tr>
@@ -12,6 +12,7 @@ export default function studentsList({student , index , deleteHandler}) {
             <td><button
             onClick={()=> deleteHandler(index)}
             >Delete</button></td>
+            <td><button onClick={()=> updateHandler(index)}>Update</button></td>
         </tr>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { data } from "./Data";
-import StudentsList from "./studentsList"; // Capitalize the component name
+import StudentsList from "./StudentsList"; // Capitalize the component name
 
 export default function Students() {
   const [students, setStudents] = useState(data);
@@ -10,34 +10,35 @@ export default function Students() {
   const [stuClass, setStuClass] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const deleteHandler = (index) =>{
-      console.log(index);
-      let newStudent = students.filter(student , i)=>{
-        if(i === index )
-        return students
-      }
-  }
+  const updateHandler = (student) => {
+    setName(student.name);
+    setStuClass(student.class);
+    setRoll(student.roll);
+    setBatch(student.batch);
+  };
+
+  const deleteHandler = (index) => {
+    const updatedStudents = students.filter((_, i) => i !== index);
+    setStudents(updatedStudents);
+  };
 
   const ctaHandler = () => {
-    if (name != "" && batch != "" && roll!="" && stuClass!="") 
-   { const newStudent = {
-      name,
-      batch,
-      roll,
-      class: stuClass,
-    };
-    console.log(newStudent);
-    setStudents([...students, newStudent]); // Update the students state with the new student
+    if (name !== "" && batch !== "" && roll !== "" && stuClass !== "") {
+      const newStudent = {
+        name,
+        batch,
+        roll,
+        class: stuClass,
+      };
+      setStudents([...students, newStudent]); // Update the students state with the new student
       setName("");
-      setStuClass("")
-      setRoll("")
-      setBatch("")
-      setErrorMessage("")
+      setStuClass("");
+      setRoll("");
+      setBatch("");
+      setErrorMessage("");
+    } else {
+      setErrorMessage("Found Blank Forms");
     }
-      
-      else{
-        setErrorMessage("Found Blank Forms")
-      }
   };
 
   return (
@@ -49,7 +50,7 @@ export default function Students() {
       <input type="text" value={stuClass} placeholder="Class" onChange={(e) => setStuClass(e.target.value)} />
       <hr />
       <button onClick={ctaHandler}>Submit</button>
-      <p style={{backgroundColor: "red", color: "White"}}>
+      <p style={{ backgroundColor: "red", color: "white" }}>
         {errorMessage}
       </p>
       <hr />
@@ -62,9 +63,16 @@ export default function Students() {
           <th>Batch</th>
           <th>Roll no.</th>
           <th>Class</th>
+          <th>Actions</th>
         </tr>
         {students.map((item, index) => (
-          <StudentsList key={index} index={index} student={item} deleteHandler={deleteHandler} />
+          <StudentsList
+            key={index}
+            index={index}
+            student={item}
+            deleteHandler={deleteHandler}
+            updateHandler={updateHandler}
+          />
         ))}
       </table>
     </div>
