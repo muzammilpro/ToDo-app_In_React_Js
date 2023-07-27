@@ -10,6 +10,14 @@ export default function Students() {
   const [stuClass, setStuClass] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
+  const deleteHandler = (index) =>{
+      console.log(index);
+      let newStudent = students.filter(student , i)=>{
+        if(i === index )
+        return students
+      }
+  }
+
   const ctaHandler = () => {
     if (name != "" && batch != "" && roll!="" && stuClass!="") 
    { const newStudent = {
@@ -56,7 +64,7 @@ export default function Students() {
           <th>Class</th>
         </tr>
         {students.map((item, index) => (
-          <StudentsList key={index} index={index} student={item} />
+          <StudentsList key={index} index={index} student={item} deleteHandler={deleteHandler} />
         ))}
       </table>
     </div>
