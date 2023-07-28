@@ -1,7 +1,5 @@
 .upperSection{
-    display:  flex;
-    align-items: center;
-    justify-content: space-between;
+
     background-color: #2196F3;
     padding: 4%;
     width: 50%;
@@ -21,6 +19,7 @@
 }
 
 .taskList{
+    
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -43,3 +42,4 @@
     padding: 4%;
     width: 50%;
 }
+

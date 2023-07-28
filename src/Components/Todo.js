@@ -32,7 +32,9 @@ export default function Todo() {
     return (
         <div>
             <center>
+                
                 <div className='upperSection'>
+                <h1>Add New Task</h1>
                     <div className='upperSection1'>
                         <input type="text" value={text} onChange={currentText} placeholder='Add new task' />
                         <button onClick={toDisplay}>Add Task</button>
@@ -47,10 +49,11 @@ export default function Todo() {
 
 
                 <div className='lowerParent'>
+                    <h1>Task List</h1>
                     {inputs.map((input, index) => (
                         <div >
                             <div key={index} className='taskList' >
-                                <p>{input}</p>
+                                <p >{input}</p>
                                <div className='btnCon'>
                                <button onClick={() => deleteHandler(index)}>Delete</button>
                                 <button onClick={() => editHandler(index)} className='editBtn'>Edit</button>
