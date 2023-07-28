@@ -40,14 +40,18 @@ export default function Todo() {
            </div>
 
 
-            {inputs.map((input, index) => (
-                <div key={index}>
+           <div className='lowerParent'>
+           {inputs.map((input, index) => (
+                <div >
+                    <div key={index} >
                     <p>{input}</p>
                     <button onClick={() => deleteHandler(index)}>Delete</button>
                     <button onClick={() => editHandler(index)}>Edit</button>
                 </div>
+                </div>
             ))}
 
+           </div>
            </center>
         </div>
     );
