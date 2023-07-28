@@ -1,5 +1,4 @@
-import Students from "./Components/TodoApp/Students";
-
+import HomePage from "./Pages/HomePage";
 
 
 export default function App() {
@@ -9,7 +8,7 @@ export default function App() {
 
   return (
     <div>
-      <Students/>
+      <HomePage/>
     </div>
   )
 }
