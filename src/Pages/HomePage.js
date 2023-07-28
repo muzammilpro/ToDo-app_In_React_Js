@@ -1,10 +1,11 @@
 import React from 'react'
-import TodoApp from '../Components/TodoApp/TodoApp'
+import Todo from '../Components/Todo'
+
 
 export default function HomePage() {
   return (
     <div>
-      <TodoApp/>
+      <Todo/>
     </div>
   )
 }
