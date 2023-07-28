@@ -31,28 +31,37 @@ export default function Todo() {
 
     return (
         <div>
-           <center>
-           <div className='upperSection'>
-           <div className='upperSection1'>
-           <input type="text" value={text} onChange={currentText} placeholder='Add new task' />
-            <button onClick={toDisplay}>Add Task</button>
-           </div>
-           </div>
-
-
-           <div className='lowerParent'>
-           {inputs.map((input, index) => (
-                <div >
-                    <div key={index} >
-                    <p>{input}</p>
-                    <button onClick={() => deleteHandler(index)}>Delete</button>
-                    <button onClick={() => editHandler(index)}>Edit</button>
+            <center>
+                <div className='upperSection'>
+                    <div className='upperSection1'>
+                        <input type="text" value={text} onChange={currentText} placeholder='Add new task' />
+                        <button onClick={toDisplay}>Add Task</button>
+                    </div>
                 </div>
-                </div>
-            ))}
 
-           </div>
-           </center>
+
+
+            </center>
+            <br/>
+            <center>
+
+
+                <div className='lowerParent'>
+                    {inputs.map((input, index) => (
+                        <div >
+                            <div key={index} className='taskList' >
+                                <p>{input}</p>
+                               <div className='btnCon'>
+                               <button onClick={() => deleteHandler(index)}>Delete</button>
+                                <button onClick={() => editHandler(index)} className='editBtn'>Edit</button>
+                               </div>
+                            </div>
+                            <br/>
+                        </div>
+                    ))}
+
+                </div>
+            </center>
         </div>
     );
 }

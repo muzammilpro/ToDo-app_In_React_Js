@@ -20,3 +20,26 @@
     margin-left: 4%;
 }
 
+.taskList{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 2%;
+}
+
+.btnCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.editBtn{
+    margin-left: 10%;
+}
+
+.lowerParent{
+    background-color: #2196F3;
+    padding: 4%;
+    width: 50%;
+}
