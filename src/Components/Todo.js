@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import './Todo.css'
 
 export default function Todo() {
     const [text, settext] = useState('');
@@ -30,9 +31,12 @@ export default function Todo() {
 
     return (
         <div>
+           <center>
            <div className='upperSection'>
-           <input type="text" value={text} onChange={currentText} />
-            <button onClick={toDisplay}>Submit</button>
+           <div className='upperSection1'>
+           <input type="text" value={text} onChange={currentText} placeholder='Add new task' />
+            <button onClick={toDisplay}>Add Task</button>
+           </div>
            </div>
 
 
@@ -44,6 +48,7 @@ export default function Todo() {
                 </div>
             ))}
 
+           </center>
         </div>
     );
 }
