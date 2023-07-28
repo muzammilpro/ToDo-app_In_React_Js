@@ -10,7 +10,12 @@
 
 
 .upperSection1{
+    width: 95%;
+    display: flex;
     background-color: white;
     padding: 3%;
    
+}
+.upperSection1> button{
+    margin-left: 4%;
 }
