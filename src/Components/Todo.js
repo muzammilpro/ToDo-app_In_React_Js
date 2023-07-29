@@ -32,9 +32,9 @@ export default function Todo() {
     return (
         <div>
             <center>
-                
+
                 <div className='upperSection'>
-                <h1>Add New Task</h1>
+                    <h1>Add New Task</h1>
                     <div className='upperSection1'>
                         <input type="text" value={text} onChange={currentText} placeholder='Add new task' />
                         <button onClick={toDisplay}>Add Task</button>
@@ -44,7 +44,7 @@ export default function Todo() {
 
 
             </center>
-            <br/>
+            <br />
             <center>
 
 
@@ -54,12 +54,12 @@ export default function Todo() {
                         <div >
                             <div key={index} className='taskList' >
                                 <p >{input}</p>
-                               <div className='btnCon'>
-                               <button onClick={() => deleteHandler(index)}>Delete</button>
-                                <button onClick={() => editHandler(index)} className='editBtn'>Edit</button>
-                               </div>
+                                <div className='btnCon'>
+                                    <button onClick={() => deleteHandler(index)}>Delete</button>
+                                    <button onClick={() => editHandler(index)} className='editBtn'>Edit</button>
+                                </div>
                             </div>
-                            <br/>
+                            <br />
                         </div>
                     ))}
 
