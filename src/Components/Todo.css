@@ -1,45 +1,84 @@
-.upperSection{
+.upperSection {
 
     background-color: #2196F3;
     padding: 4%;
     width: 50%;
-    
+
 }
 
 
-.upperSection1{
+.upperSection1 {
     width: 95%;
     display: flex;
     background-color: white;
     padding: 3%;
-   
-}
-.upperSection1> button{
-    margin-left: 4%;
+
 }
 
-.taskList{
-    
+
+.taskList {
+
     display: flex;
     justify-content: space-between;
     background-color: white;
-    padding: 2%;
+    padding: 4%;
 }
 
-.btnCon{
+.btnCon {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2%;
 }
 
-.editBtn{
-    margin-left: 10%;
-}
 
-.lowerParent{
+
+.lowerParent {
     background-color: #2196F3;
     padding: 4%;
     width: 50%;
 }
 
+
+.heading {
+    color: white;
+}
+
+.btnbtn {
+    margin-left: 10%;
+    background-color: #2196F3;
+    color: white;
+    padding: 15%;
+    border-radius: 15%;
+    border: none
+}
+
+.Hbtn {
+    margin-left: 5%;
+    background-color: #2196F3;
+    color: white;
+    padding: 1%;
+    border-radius: 15%;
+    border: none;
+}
+
+.inputArea {
+    width: 80%;
+
+}
+
+.btnbtn:hover {
+    color: #2196F3;
+    background-color: white;
+    border: 12px #2196F3
+}
+
+.Hbtn:hover {
+    color: #2196F3;
+    background-color: white;    
+}
+
+.pTag {
+    width: 80%;
+    word-wrap: break-word;
+}
